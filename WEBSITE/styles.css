@@ -4,7 +4,8 @@ html {
 
     margin-left: auto;
     margin-right: auto;
-    margin-top: 50px;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
     width: 80vw;
 
     padding: 0px;
@@ -16,10 +17,11 @@ html {
 
 .header {
     border-bottom-style: solid;
+    height: 8vh;
 }
 
 .chat-window {
-    height: 80vh;
+    height: 70vh;
     overflow: scroll;
 }
 
@@ -46,4 +48,27 @@ p {
     margin-right: auto;
     background-color: #c8d8e4;
     border-bottom-left-radius: 0px;
+}
+
+.input-window {
+    border-top-style: solid;
+    height: 8vh;
+}
+
+.text-input {
+    margin: 10px;
+    padding: 15px;
+    border-radius: 30px;
+    border-style: solid;
+    border-color: #000;
+}
+
+input.text-input {
+    width: 80%;
+}
+
+input:focus {
+    outline: #2b6777;
+    margin: 10px;
+    padding: 15px;
 }
