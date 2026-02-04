@@ -1,0 +1,34 @@
+html {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    width: 80vw;
+
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 15px;
+}
+
+.bubble {
+    border-radius: 15px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    max-width: 75%;
+    width: fit-content;
+    padding: 3px;
+}
+
+.bubble.user {
+    margin-left: auto;
+    background-color: #f2f2f2;
+    border-bottom-right-radius: 0px;
+}
+
+.bubble.chatter {
+    margin-right: auto;
+    background-color: #c8d8e4;
+    border-bottom-left-radius: 0px;
+}
