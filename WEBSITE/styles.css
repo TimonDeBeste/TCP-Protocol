@@ -67,6 +67,14 @@ input.text-input {
     width: 80%;
 }
 
+button:hover {
+    scale: 105%;
+}
+
+button:active {
+    scale: 100%;
+}
+
 input:focus {
     outline: #2b6777;
     margin: 10px;
