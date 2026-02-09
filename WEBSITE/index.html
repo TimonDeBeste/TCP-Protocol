@@ -7,6 +7,7 @@
     <title>ChatTCP</title>
     <link rel="stylesheet" href="./styles.css">
     <script src="https://kit.fontawesome.com/06c8f43356.js" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
 </head>
 
 <body>
@@ -14,60 +15,15 @@
         <div class="header">
             <h1>ChatTCP</h1>
         </div>
-        <div class="chat-window">
-            <div class="bubble chatter">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ut neque laoreet, rhoncus eros eget,
-                    condimentum lectus.</p>
-            </div>
-
-            <div class="bubble user">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ut neque laoreet, rhoncus eros eget,
-                    condimentum lectus.</p>
-            </div>
-            <div class="bubble chatter">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ut neque laoreet, rhoncus eros eget,
-                    condimentum lectus.</p>
-            </div>
-
-            <div class="bubble user">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ut neque laoreet, rhoncus eros eget,
-                    condimentum lectus.</p>
-            </div>
-            <div class="bubble chatter">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ut neque laoreet, rhoncus eros eget,
-                    condimentum lectus.</p>
-            </div>
-
-            <div class="bubble user">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ut neque laoreet, rhoncus eros eget,
-                    condimentum lectus.</p>
-            </div>
-            <div class="bubble chatter">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ut neque laoreet, rhoncus eros eget,
-                    condimentum lectus.</p>
-            </div>
-
-            <div class="bubble user">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ut neque laoreet, rhoncus eros eget,
-                    condimentum lectus.</p>
-            </div>
-            <div class="bubble chatter">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ut neque laoreet, rhoncus eros eget,
-                    condimentum lectus.</p>
-            </div>
-
-            <div class="bubble user">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ut neque laoreet, rhoncus eros eget,
-                    condimentum lectus.</p>
-            </div>
-
+        <div class="chat-window" id="chat-window">
         </div>
         <div class="input-window">
             <input type="text" id="message-input" class="text-input">
             <button class="send-button text-input"><i class="fa-solid fa-paper-plane"></i></button>
-
         </div>
     </div>
+    <button onclick="addUserBubble('User Test')">add user bubble</button>
+    <button onclick="addChatterBubble('Chatter Test')">add chatter bubble</button>
 </body>
 
 </html>
