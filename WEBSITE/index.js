@@ -26,3 +26,12 @@ function addChatterBubble(text) {
     parentElement.scrollTo(0, parentElement.scrollHeight)
 }
 
+
+const input = document.getElementById("message-input");
+
+function sendMessage() {
+    if (input.value != ""){
+        addUserBubble(input.value);
+    }
+    input.value = ""
+}
