@@ -22,7 +22,7 @@ input.addEventListener("keypress", function (event) {
 });
 
 function sendMessage() {
-    if (input.value !== ""){
+    if (input.value !== "") {
         addBubble("user", input.value);
     }
     input.value = ""
