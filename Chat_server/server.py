@@ -1,6 +1,7 @@
 import socket
 import threading
 
+
 HEADER : int = 64
 PORT = 5050
 SERVER = '127.0.0.1'
@@ -8,12 +9,9 @@ ADDR = (SERVER, PORT)
 FORMAT = 'utf-8'
 DISCONNECT_MESSAGE = "DISCONNECT"
 
-server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-server.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
-server.bind(ADDR)
-
-clients = []
-
+server = socket.socket(socket.AF_INET, socket.SOCK_STREAM) #* gives socket ipv4 and TCP with SOCK_STREAM
+server.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1) #* clears socket for reuse
+server.bind(ADDR) #* assigns adress to socket
 
 def handle_client(conn, addr):
     print(f"Welcome {addr} to the chat.")
@@ -30,7 +28,7 @@ def handle_client(conn, addr):
 
             print(f"[{addr}] {msg}")
     
-    conn.close()
+    conn.close()\
 
 
 def start():
