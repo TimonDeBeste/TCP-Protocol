@@ -9,7 +9,7 @@ ADDR = (SERVER, PORT)
 FORMAT = 'utf-8'
 DISCONNECT_MESSAGE = "DISCONNECT"
 
-server = socket.socket(socket.AF_INET, socket.SOCK_STREAM) #* Creates a TCP/IP IPv4 socker
+server = socket.socket(socket.AF_INET, socket.SOCK_STREAM) #* Creates a TCP/IP IPv4 socket
 server.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1) #* Allows the port to be reused after restart
 server.bind(ADDR) #* Binds socket to ip and port
 

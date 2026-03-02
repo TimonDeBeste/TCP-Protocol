@@ -22,6 +22,10 @@ Verder met website (Github pages en apache2)
 
 week 4 3&4 Maart
 
+Quinten 
+Server omgebouwd om te werken met browser
+Verder met API
+
 week 5 17&18 Maart
 
 week 6 24&25 Maart
