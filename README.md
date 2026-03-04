@@ -27,9 +27,7 @@ week 4
 Timon
 Apache2 server werkt, ziet er zo uit:
 
-```html
 <img src="./READMEAssets/CHATTCP.png">
-```
 
 week 5
 17&18 Maart
