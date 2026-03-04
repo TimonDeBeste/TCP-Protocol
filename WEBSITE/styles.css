@@ -22,7 +22,7 @@ html {
 
 .chat-window {
     height: 70vh;
-    overflow: scroll;
+    overflow-y: scroll;
 }
 
 .bubble {
@@ -32,6 +32,8 @@ html {
     max-width: 75%;
     width: fit-content;
     padding: 10px;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
 }
 
 p {
