@@ -28,7 +28,7 @@ def recv_all(conn, length):
         data += packet
     return data
 
-#*
+#* 
 def broadcast(message, sender):
     with clients_lock:
         for client in clients:
@@ -38,7 +38,7 @@ def broadcast(message, sender):
                 except Exception:
                     clients.remove(client) #* Removes offline clients
 
-#*
+#* Decodes binary and shows message
 def handle_client(conn, addr):
     ip, port = addr
     try:
