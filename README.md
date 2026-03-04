@@ -26,7 +26,10 @@ week 4
 3&4 Maart
 Timon
 Apache2 server werkt, ziet er zo uit:
-!(A webinterface for chatting called chatTCP)[READMEAssets/CHATTCP]
+
+```html
+<img src="./READMEAssets/CHATTCP.png">
+```
 
 week 5
 17&18 Maart
