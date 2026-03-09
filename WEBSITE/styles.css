@@ -1,3 +1,27 @@
+@keyframes appear-left {
+    from {
+        scale: .5;
+        transform: translate(-100%, 0);
+    }
+
+    to {
+        scale: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes appear-right {
+    from {
+        scale: .5;
+        transform: translate(100%, 0);
+    }
+
+    to {
+        scale: 1;
+        transform: translate(0);
+    }
+}
+
 html {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-align: center;
@@ -44,17 +68,19 @@ p {
     margin-left: auto;
     background-color: #f2f2f2;
     border-bottom-right-radius: 0px;
+    animation: appear-right .025s linear;
 }
 
 .bubble.chatter {
     margin-right: auto;
     background-color: #c8d8e4;
     border-bottom-left-radius: 0px;
+    animation: appear-left .025s linear;
 }
 
 .input-window {
     border-top-style: solid;
-    height: 8vh;
+    height: fit-content;
 }
 
 .text-input {
