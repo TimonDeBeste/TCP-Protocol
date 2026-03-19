@@ -4,7 +4,7 @@ import threading
 
 HEADER : int = 64
 PORT : int = 5050 #* Port the servers listens on
-SERVER = '127.0.0.0' #* IP from the server
+SERVER = '192.168.100.102' #* IP from the server
 ADDR = (SERVER, PORT)
 FORMAT = 'utf-8'
 DISCONNECT_MESSAGE = "DISCONNECT"
