@@ -1,23 +1,26 @@
-from fastapi import FastAPI, WebSocket, WebSocketDisconnect 
-from fastapi.staticfiles import StaticFiles
-import socket 
-import uvicorn 
 import asyncio
+import socket
 
-HEADER : int = 64
-CHAT_PORT : int = 5050 
-CHAT_SERVER = '192.168.100.102' 
+import uvicorn
+from fastapi import FastAPI, WebSocket, WebSocketDisconnect
+from fastapi.staticfiles import StaticFiles
+
+HEADER: int = 64
+CHAT_PORT: int = 5050
+CHAT_SERVER = "192.168.100.102"
 CHAT_ADDR = (CHAT_SERVER, CHAT_PORT)
-FORMAT = 'utf-8'
+FORMAT = "utf-8"
 DISCONNECT_MESSAGE = "DISCONNECT"
 API_PORT = 8080
 
 app = FastAPI()
 
-def build_msg(text:str) -> bytes:
+
+def build_msg(text: str) -> bytes:
     msg = text.encode(FORMAT)
     header = str(len(msg)).encode(FORMAT).ljust(HEADER)
     return header + msg
+
 
 async def recv_all(reader: asyncio.StreamReader, length: int) -> bytes | None:
     data = b""
@@ -28,6 +31,7 @@ async def recv_all(reader: asyncio.StreamReader, length: int) -> bytes | None:
         data += packet
     return data
 
+
 @app.websocket("/ws")
 async def ws_endpoint(ws: WebSocket):
     await ws.accept()
@@ -37,7 +41,7 @@ async def ws_endpoint(ws: WebSocket):
     except ConnectionRefusedError:
         await ws.close(code=1011, reason="Chat server unreachable")
         return
-    
+
     async def tcp_to_ws():
         try:
             while True:
@@ -61,14 +65,15 @@ async def ws_endpoint(ws: WebSocket):
     tcp_task = asyncio.create_task(tcp_to_ws())
 
     try:
-        text = await ws.receive_text()
-        writer.write(build_msg(text))
-        await writer.drain()
+        while True:
+            text = await ws.receive_text()
+            writer.write(build_msg(text))
+            await writer.drain()
     except WebSocketDisconnect:
         pass
     finally:
         tcp_task.cancel
-        
+
         try:
             writer.write(build_msg(DISCONNECT_MESSAGE))
             await writer.drain()
@@ -78,7 +83,6 @@ async def ws_endpoint(ws: WebSocket):
         except Exception:
             pass
 
-app.mount("/", StaticFiles(directory="../WEBSITE", html=True), name="static")
 
 if __name__ == "__main__":
     hostname = socket.gethostname()
