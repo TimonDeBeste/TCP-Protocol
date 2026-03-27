@@ -36,6 +36,8 @@ Gewacht op quinten om klaar te zijn met de server en API
 Quinten
 API Afgemaakt
 
+Vanaf hier zullen we ook stoppen met de github updaten, waarschijnlijk aan het einder nog 1 laatste update om echt alles te commiten, maar in principe zullen we vanaf nu alles op de servers zelf doen.
+
 week 6
 24&25 Maart
 Timon & Quinten
