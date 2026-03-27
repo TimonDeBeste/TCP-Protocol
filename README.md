@@ -31,6 +31,13 @@ Apache2 server werkt, ziet er zo uit:
 
 week 5
 17&18 Maart
+Timon
+Gewacht op quinten om klaar te zijn met de server en API
+Quinten
+API Afgemaakt
 
 week 6
 24&25 Maart
+Timon & Quinten
+Hij werkt bijna, nog een paar bugfixjes
+We kunnen nu chatten, maar er is een bug waarbij de zender alle berichten terug krijgt alsof die naar de zender zijn gestuurd
