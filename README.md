@@ -42,4 +42,4 @@ week 6
 24&25 Maart
 Timon & Quinten
 Hij werkt bijna, nog een paar bugfixjes
-We kunnen nu chatten, maar er is een bug waarbij de zender alle berichten terug krijgt alsof die naar de zender zijn gestuurd
+We kunnen nu chatten, en de laatste bugs zijn gefixed
