@@ -1,4 +1,4 @@
-const ws = new WebSocket(`ws://$192.168.100.103:8080/ws`);
+const ws = new WebSocket(`ws://${window.location.hostname}:8080/ws`);
 
 ws.onmessage = (event) => {
   addBubble("chatter", event.data);
