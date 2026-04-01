@@ -44,7 +44,7 @@ Timon & Quinten
 Hij werkt bijna, nog een paar bugfixjes
 We kunnen nu chatten, en de laatste bugs zijn gefixed
 
-<img src="./READMEAssets/bug.png">
+<img src="./READMEAssets/image.png">
 Bug waar verstuurder eigen bericht terug krijgt
 
 <img src="./READMEAssets/chat.png">
